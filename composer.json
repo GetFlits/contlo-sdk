@@ -1,0 +1,25 @@
+{
+  "name": "flits/contlo-sdk",
+  "description": "Contlo SDK for php project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ravindra",
+      "email": "ravi@getflits.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "guzzlehttp/guzzle": "^7.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Flits\\Contlo\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
