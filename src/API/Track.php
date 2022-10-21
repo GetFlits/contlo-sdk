@@ -6,7 +6,7 @@ use Flits\Contlo\ContloProvider;
 
 class Track extends ContloProvider {
 
-    public $URL = "/track";
+    public $URL = "track";
     public $METHOD = "POST";
 
     function __construct($config) {

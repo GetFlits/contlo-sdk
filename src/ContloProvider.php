@@ -1,4 +1,5 @@
 <?php
+
 namespace Flits\Contlo;
 
 use GuzzleHttp\Client;
@@ -7,7 +8,7 @@ use GuzzleHttp\Psr7;
 use Flits\Contlo\ContloException;
 
 class ContloProvider {
-    public $BASE_URL = "https://api.contlo.com/<VERSION>";
+    public $BASE_URL = "https://api.contlo.com/<VERSION>/";
     public $HEADERS;
     public $VERSION = 'v1';
     public $EXTRA_CONFIG;
@@ -45,7 +46,7 @@ class ContloProvider {
     function POST($payload) {
         try {
             $response = $this->client->request($this->METHOD, $this->URL, [
-                'json' => $payload
+                'body' => $payload,
             ]);
         } catch (RequestException $ex) {
             throw new ContloException($ex->getResponse()->getBody()->getContents(), $ex->getResponse()->getStatusCode());
